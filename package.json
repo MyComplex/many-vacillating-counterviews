@@ -1,0 +1,43 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "nodemon": "^3.0.1"
+  },
+  "name": "many-vacillating-counterviews",
+  "description": "A simple technology blog site",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyComplex/many-vacillating-counterviews.git"
+  },
+  "keywords": [
+    "technology",
+    "opinion",
+    "review",
+    "ratings",
+    "information",
+    "education",
+    "knowledge",
+    "insight"
+  ],
+  "author": "Jesus Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MyComplex/many-vacillating-counterviews/issues"
+  },
+  "homepage": "https://github.com/MyComplex/many-vacillating-counterviews#readme"
+}
