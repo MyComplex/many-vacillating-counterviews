@@ -1,0 +1,16 @@
+{{#each articles}}
+<article>
+    <header>
+        <h1>{{title}}</h1>
+    </header>
+    <section>
+        <div>{{content}}</div>
+    </section>
+    <footer>
+        <h4>
+            {{user.username}}
+        </h4>
+        <p>{{created}}</p>
+    </footer>
+</article>
+{{/each}}
