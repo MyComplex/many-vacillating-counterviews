@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        {{#unless user}}
+        {{> logged-on}}
+        {{else}}
+        {{> logged-off}}
+        {{/unless}}
+        <h1>
+            The Cat & Dog Blog
+        </h1>
+    </header>
+    <main>
     {{{body}}}
+    </main>
 </body>
 </html>
