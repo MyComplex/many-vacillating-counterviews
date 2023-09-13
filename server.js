@@ -1,11 +1,21 @@
 const path = require('path');
 const express = require('express');
+const session = require('express-session');
 const expressHandlebars = require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+const sesh = {
+  secret: process.env.SESH_SECRET,
+  resave: false,
+  saveUninitialized: true,
+};
+
+app.use(session(sesh));
+
 const handlebars = expressHandlebars.create({});
 
 app.engine('handlebars', handlebars.engine);
