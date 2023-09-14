@@ -40,6 +40,6 @@ const handleSignupForm = async (e) => {
     }
 };
 
-document.querySelector('.logon-form').addEventListener('submit', handleLogonForm);
+document.querySelector('#logon-form').addEventListener('submit', handleLogonForm);
 
-document.querySelector('.signup-form').addEventListener('submit', handleSignupForm);
+document.querySelector('#signup-form').addEventListener('submit', handleSignupForm);
