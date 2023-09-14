@@ -19,10 +19,10 @@
                     <a href="#">Dashboard</a>
                 </li>
                 <li>
-                    {{#unless loggedOff}}
-                    {{> logged-on}}
-                    {{else}}
+                    {{#unless loggedOn}}
                     {{> logged-off}}
+                    {{else}}
+                    {{> logged-on}}
                     {{/unless}}
                 </li>
             </ul>
