@@ -26,11 +26,19 @@ router.get('/', async (req, res) => {
         console.log(articles);
         res.render('homepage', {
             articles,
+            loggedOn: req.session.loggedIn,
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
+});
+router.get('/logon', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('logon');
 });
 
 module.exports = router;
