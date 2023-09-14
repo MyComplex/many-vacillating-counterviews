@@ -33,12 +33,21 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
 router.get('/logon', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
   res.render('logon');
+});
+
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('signup');
 });
 
 module.exports = router;
