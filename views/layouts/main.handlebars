@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sit, Ubu, sit! Good dog!</title>
 </head>
+
 <body>
     <header>
-        {{#unless user}}
-        {{> logged-on}}
-        {{else}}
-        {{> logged-off}}
-        {{/unless}}
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    {{#unless loggedOff}}
+                    {{> logged-on}}
+                    {{else}}
+                    {{> logged-off}}
+                    {{/unless}}
+                </li>
+            </ul>
+        </nav>
         <h1>
             The Cat & Dog Blog
         </h1>
     </header>
     <main>
-    {{{body}}}
+        {{{body}}}
     </main>
     <footer>
-        
+
     </footer>
 </body>
+
 </html>
