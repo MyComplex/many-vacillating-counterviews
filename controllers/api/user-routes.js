@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         });
 
         req.session.save(() => {
-            req.session.loggedOn = true;
+            req.session.loggedIn = true;
             res.status(200).json(userData);
         });
     } catch (err) {
@@ -34,7 +34,7 @@ router.post('/logon', async (req, res) => {
             return;
         }
 
-        const passwordValid = await userData.checkPassword(req.body.password);
+        const passwordValid = await userData.verifyPassword(req.body.password);
 
         if (!passwordValid) {
             res.status(418).json({ message: 'The username or password is incorrect. Please try again!' });
@@ -42,7 +42,7 @@ router.post('/logon', async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.loggedOn = true;
+            req.session.loggedIn = true;
             res.status(200).json({ user: userData, message: 'You have logged on!' });
         });
     } catch (err) {
@@ -53,7 +53,7 @@ router.post('/logon', async (req, res) => {
 
 // USER LOGOFF
 router.post('/logoff', (req, res) => {
-    if (req.session.loggedOn) {
+    if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(200).end();
         });
