@@ -1,1 +1,18 @@
-This is where the dashboard goes
+{{#each articles}}
+<article>
+    <header>
+        <h1>{{title}}</h1>
+    </header>
+    <section>
+        <div>{{content}}</div>
+    </section>
+    <footer>
+        <h4>
+            Posted by {{user.username}}
+        </h4>
+        <p>
+            on {{created}}
+        </p>
+    </footer>
+</article>
+{{/each}}
