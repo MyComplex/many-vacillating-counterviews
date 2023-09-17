@@ -63,14 +63,29 @@ router.get('/dashboard', async (req, res) => {
       attributes: [
         'title',
         'content',
-        [sequelize.fn('date_format', sequelize.col('created_at'), '%m-%d-%Y'), 'created']
+        [sequelize.fn('date_format', sequelize.col('article.created_at'), '%m-%d-%Y'), 'posted'],
       ],
       include: [
         {
           model: User,
           attributes: [
             'username'
-          ]
+          ],
+        },
+        {
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: [
+                'username',
+              ],
+            },
+          ],
+          attributes: [
+            'comment',
+            [sequelize.fn('date_format', sequelize.col('comments.created_at'), '%m-%d-%Y'), 'posted'],
+          ],
         },
       ],
     });
