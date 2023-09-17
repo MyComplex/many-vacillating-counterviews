@@ -1,18 +1,5 @@
-{{#each articles}}
-<article>
-    <header>
-        <h1>{{title}}</h1>
-    </header>
-    <section>
-        <div>{{content}}</div>
-    </section>
-    <footer>
-        <h4>
-            Posted by {{user.username}}
-        </h4>
-        <p>
-            on {{created}}
-        </p>
-    </footer>
-</article>
-{{/each}}
+{{> articles}}
+{{#unless loggedOn}}
+{{else}}
+<p>Edit post button here</p>
+{{/unless}}
