@@ -1,51 +1,51 @@
 [
     {
-        "content": "Why hunt when you can just annoy your human with incessant meowing?",
+        "comment": "Why hunt when you can just annoy your human with incessant meowing?",
         "comment_author": 3,
         "article_id": 1
     },
     {
-        "content": "To each their own.",
+        "comment": "To each their own.",
         "comment_author": 4,
         "article_id": 1
     },
     {
-        "content": "I totally get this.",
+        "comment": "I totally get this.",
         "comment_author": 2,
         "article_id": 2
     },
     {
-        "content": "Meh.",
+        "comment": "Meh.",
         "comment_author": 5,
         "article_id": 2
     },
     {
-        "content": "I'm hungry!",
+        "comment": "I'm hungry!",
         "comment_author": 3,
         "article_id": 4
     },
     {
-        "content": "Me too!",
+        "comment": "Me too!",
         "comment_author": 3,
         "article_id": 4
     },
     {
-        "content": "Lucky dog!",
+        "comment": "Lucky dog!",
         "comment_author": 2,
         "article_id": 3
     },
     {
-        "content": "But how do you chase a ball?",
+        "comment": "But how do you chase a ball?",
         "comment_author": 1,
         "article_id": 3
     },
     {
-        "content": "Contrary to popular opinion, I enjoy a good cuddle with my human.",
+        "comment": "Contrary to popular opinion, I enjoy a good cuddle with my human.",
         "comment_author": 1,
         "article_id": 5
     },
     {
-        "content": "I prefer a nice petting at arms length.",
+        "comment": "I prefer a nice petting at arms length.",
         "comment_author": 4,
         "article_id": 5
     }
