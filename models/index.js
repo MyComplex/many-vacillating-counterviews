@@ -17,7 +17,6 @@ User.hasMany(Comment,{
 });
 
 Comment.belongsTo(User, {
-    as: 'commenter',
     foreignKey: 'comment_author',
 });
 
