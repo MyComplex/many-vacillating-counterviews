@@ -8,21 +8,36 @@ router.get('/', async (req, res) => {
       attributes: [
         'title',
         'content',
-        [sequelize.fn('date_format', sequelize.col('created_at'), '%m-%d-%Y'), 'created']
+        [sequelize.fn('date_format', sequelize.col('article.created_at'), '%m-%d-%Y'), 'posted'],
       ],
       include: [
         {
           model: User,
           attributes: [
             'username'
-          ]
+          ],
+        },
+        {
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: [
+                'username',
+              ],
+            },
+          ],
+          attributes: [
+            'comment',
+            [sequelize.fn('date_format', sequelize.col('comments.created_at'), '%m-%d-%Y'), 'posted'],
+          ],
         },
       ],
     });
-
     const articles = articleData.map((article) =>
       article.get({ plain: true })
     );
+
     console.log(articles);
     res.render('homepage', {
       articles,
@@ -88,13 +103,5 @@ router.get('/signup', (req, res) => {
   }
   res.render('signup');
 });
-
-// router.get('/dashboard', (req, res) => {
-//   if (!req.session.loggedIn) {
-//     res.redirect('/logon');
-//     return;
-//   }
-//   res.render('dashboard');
-// });
 
 module.exports = router;
