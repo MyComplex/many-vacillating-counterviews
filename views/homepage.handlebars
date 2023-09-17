@@ -8,11 +8,25 @@
     </section>
     <footer>
         <h4>
-            Posted by {{user.username}}
+            Posted by {{user.username}} on {{posted}}
         </h4>
-        <p>
-            on {{created}}
-        </p>
     </footer>
+    <details>
+        <summary>
+            Comments
+        </summary>
+        {{#if comments}}
+        {{#each comments}}
+        <section>
+            <div>
+                {{comment}}
+            </div>
+            <div>
+                Posted on {{posted}} by {{user.username}}
+            </div>
+        </section>
+        {{/each}}
+        {{/if}}
+    </details>
 </article>
 {{/each}}
