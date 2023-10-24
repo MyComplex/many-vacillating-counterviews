@@ -11,6 +11,7 @@
             Posted by {{user.username}} on {{posted}}
         </h4>
     </footer>
+    {{#if loggedOn}}
     <details>
         <summary>
             Comments
@@ -28,5 +29,6 @@
         {{/each}}
         {{/if}}
     </details>
+    {{/if}}
 </article>
 {{/each}}

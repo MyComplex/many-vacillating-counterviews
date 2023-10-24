@@ -10,13 +10,13 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="header-nav">
+            <ul class="header-nav-menu">
                 <li>
-                    <a href="/">Home</a>
+                    <a href="/" class="header-nav-menu-links">Home</a>
                 </li>
                 <li>
-                    <a href="/dashboard">Dashboard</a>
+                    <a href="/dashboard" class="header-nav-menu-links">Dashboard</a>
                 </li>
                 <li>
                     {{#unless loggedOn}}
@@ -27,7 +27,7 @@
                 </li>
             </ul>
         </nav>
-        <h1>
+        <h1 class="title">
             The Cat & Dog Blog
         </h1>
     </header>
